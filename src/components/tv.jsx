@@ -13,7 +13,7 @@ export default function TV() {
             }
         });
         if (response.status !== 200) {
-            throw data.error || new Error(`Request failed with status ${response.status}`);
+            throw response.error || new Error(`Request failed with status ${response.status}`);
         } else {
             const data = await response.json();
             setText(data.result.choices[0].text);
