@@ -1,0 +1,50 @@
+.container {
+    background-image: url('../images/tv.png');
+    width: 500px;
+    padding-top: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.speechBox {
+    background-image: url('../images/speech.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    top: 70px;
+    left: 0;
+    position: absolute;
+    transform: rotate(-10deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movingTextContainer {
+    width: 66%;
+    height: 29%;
+    overflow: hidden;
+    transform: rotate(2.2deg);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.movingText {
+    color: black;
+    transform: translateX(100%);
+    animation: moveLeft 10s ease-out;
+    white-space: nowrap;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
